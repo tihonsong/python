@@ -24,7 +24,17 @@ print(max_num)
 # Подсказки:
 # * постарайтесь сделать решение через действия над числами;
 # * при желании и понимании воспользуйтесь синтаксисом кортежей Python.
+number_1 = input("Please enter number1 : ")
+number_2 = input("Please enter number2 : ")
+print(number_1, number_2)
 
+number_1 = int(number_1 + number_2)
+number_2 = number_1 - int(number_2)
+number_1 = -(number_2 - number_1)
+while number_2 % 10 == 0:
+    number_2 = number_2 // 10
+
+print(number_1, number_2)
 
 # Задача-3: Напишите программу, вычисляющую корни квадратного уравнения вида
 # ax² + bx + c = 0.
