@@ -42,3 +42,13 @@ print(number_1, number_2)
 # Для вычисления квадратного корня воспользуйтесь функцией sqrt() модуля math:
 # import math
 # math.sqrt(4) - вычисляет корень числа 4
+import math
+
+number_a = int(input("Please enter a : "))
+number_b = int(input("Please enter b : "))
+number_c = int(input("Please enter c : "))
+
+minus_x = (-number_b - math.sqrt(abs(number_b ** 2 - 4 * number_a * number_c))) / 2 * number_a
+plus_x = (-number_b + math.sqrt(abs(number_b ** 2 - 4 * number_a * number_c))) / 2 * number_a
+
+print(minus_x, plus_x)
