@@ -11,4 +11,7 @@ def my_func(number_1, number_2, number_3):
     return max_num_1 + max_num_2
 
 
-print(my_func(int(input("Number1 :")), int(input("Number2 :")), int(input("Number3 :"))))
+try:
+    print(my_func(int(input("Number1 :")), int(input("Number2 :")), int(input("Number3 :"))))
+except ValueError:
+    print("Нельза вводить строки!!!")

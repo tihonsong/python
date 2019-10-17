@@ -2,9 +2,14 @@
 #    возведение числа x в степень y. Задание необходимо реализовать в виде функции my_func(x, y). При решении задания
 #    необходимо обойтись без встроенной функции возведения числа в степень.
 
-
+"""
 def my_func(x, y):
     return pow(x, y)
+"""
 
+my_func = (lambda x, y: x ** y)
 
-print(round(my_func(float(input("X : ")), int(input("Y : "))), 2))
+try:
+    print(round(my_func(float(input("X : ")), int(input("Y : "))), 2))
+except ValueError:
+    print("Нельза вводить строки!!!")

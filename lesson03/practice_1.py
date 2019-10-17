@@ -8,6 +8,8 @@ def divide_number():
 
     except ZeroDivisionError:
         print("Не правильно число!")
+    except ValueError:
+        print("Не можете вводить строки")
 
 
 divide_number()
