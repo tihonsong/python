@@ -14,10 +14,10 @@ class Worker:
     _position = ''
     _income = {"profit": 0, "bonus": 0}
 
-    def __init__(self, name, surname, position):
+    def __init__(self, name, surname, pos):
         self._name = name
         self._surname = surname
-        self._position = position
+        self._position = pos
 
     def set_profit(self, profit, bonus):
         try:
@@ -28,8 +28,8 @@ class Worker:
 
 
 class Position(Worker):
-    def __init__(self, name, surname, position):
-        super().__init__(name, surname, position)
+    def __init__(self, name, surname, pos):
+        super().__init__(name, surname, pos)
 
     def get_full_name(self):
         return f"{self._surname} {self._name}"
