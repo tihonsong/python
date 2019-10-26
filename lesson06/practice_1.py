@@ -4,7 +4,7 @@
    Время перехода между режимами должно составлять 7 и 2 секунды. Проверить работу примера, создав экземпляр и вызвав
    описанный метод.
 """
-from time import sleep
+from time import sleep, time
 from itertools import cycle
 
 
@@ -14,7 +14,10 @@ class TrafficLight:
     def running(self, mode_time1=7, mode_time2=2):
         try:
             mode_time1, mode_time2 = map(int, [mode_time1, mode_time2])
+            end_time = time() + 60
             for color in cycle(self.__color):
+                if time() > end_time:
+                    break
                 if color in ("красный", "зеленый"):
                     print(color)
                     sleep(mode_time1)
