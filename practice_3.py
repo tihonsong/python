@@ -16,7 +16,7 @@ class MyClass:
 
     def list_func(self):
         try:
-            str_input = input("ВВодите 2 числа : ")
+            str_input = input("ВВодите значение : ")
             if str_input == '':
                 return self.my_list
 
@@ -28,14 +28,18 @@ class MyClass:
                 str_input = int(str_input)
         except ValueError:
             print("Строки нельза")
-            self.list_func()
+            return self.list_func()
         except MyException as ex:
             print(ex)
-            self.list_func()
-        finally:
+            return self.list_func()
+        else:
             self.my_list.append(str_input)
-            self.list_func()
+            return self.list_func()
 
 
 obj_myclass = MyClass()
-obj_myclass.list_func()
+is_end = False
+while not is_end:
+    print(obj_myclass.list_func())
+    if input("Продольжаете(Y/N)? ").lower() == 'n':
+        is_end = True
